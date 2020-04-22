@@ -1,0 +1,167 @@
+/*
+* @Author: Samon Xie
+* @Date:   2020-03-01 18:26:49
+* @Last Modified by:   Samon Xie
+* @Last Modified time: 2020-04-22 18:43:31
+*/
+%cover{
+   //height: 100%;
+   line-height:1;
+   display: -ms-flexbox;
+   display: flex;
+   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+   background-repeat: no-repeat;
+   background-size: cover;  
+   background-position: center center;
+ 
+}
+.home {
+  @extend %cover;
+  background-color:$body-bg;
+  color: $body-color;
+  background-image: url($home-bg-img-url);
+  padding-top: 5.5rem !important;
+   @include media-breakpoint-between(sm, md){
+      padding-top: 3.5rem !important;
+  }
+}
+
+
+#home-canvas{
+  position: absolute;
+  top:0;
+  left: 0;
+  display:inline-block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%
+}
+
+ 
+%stripes-bg{
+  background-repet:repeat;
+  background-position: 0 0;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  
+}
+
+.stripes-1st-bg{
+     @extend %stripes-bg;
+     background-image: -webkit-linear-gradient($white 50%, $gray-700 50%);
+     background-size: 100% 100%;
+     -webkit-animation: stripes-1st 6s linear infinite;
+     animation: stripes-1st 6s linear infinite;
+
+}
+
+.stripes-3rd-bg{
+     @extend %stripes-bg;
+     background-image: -webkit-linear-gradient($primary 50%, $white 50%);
+     background-size: 100% 5px;
+     -webkit-animation: stripes-3rd 5s linear infinite;
+     animation: stripes-3rd 5s linear infinite;
+
+}
+
+@-webkit-keyframes stripes-1st {
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+@keyframes stripes-1st {
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+
+@-webkit-keyframes stripes-3rd {
+  100% {
+    background-position: 0  -50px;
+  }
+}
+
+@keyframes stripes-3rd {
+  100% {
+    background-position: 0  -50px;
+  }
+}
+
+// first line profile textuality
+.profile-fs-1st {
+
+  @include media-breakpoint-down(md){
+      @include font-size(1.5rem , true);
+  }
+  @include media-breakpoint-between(md, lg){
+      @include font-size(1.87rem , true);
+  }
+  @include media-breakpoint-between(lg, xl){
+      @include font-size(2.2rem , true);
+  }
+
+  @include media-breakpoint-up(xl){
+    @include font-size(2.5rem , true);
+  }
+  
+}
+
+// second line profile textuality
+.profile-fs-2nd {
+
+  @include media-breakpoint-down(md){
+      @include font-size(1.35rem , true);
+  }
+  @include media-breakpoint-between(md, lg){
+      @include font-size(1.86rem , true);
+  }
+
+    @include media-breakpoint-between(lg, xl){
+      @include font-size(2.46rem , true);
+  }
+
+  @include media-breakpoint-up(xl){
+   @include font-size(2.94rem , true);
+  }
+
+  
+}
+
+// third line profile textuality
+.profile-fs-3rd {
+  @include media-breakpoint-down(md){
+      @include font-size(1.1rem , true);
+  }
+  @include media-breakpoint-between(md, lg){
+      @include font-size(1.58rem , true);
+  }
+
+    @include media-breakpoint-between(lg, xl){
+      @include font-size(2.1rem , true);
+  }
+
+  @include media-breakpoint-up(xl){
+   @include font-size(2.52rem , true);
+  } 
+}
+
+.qr-banner{
+     padding-bottom:3.5rem;
+     & img{
+      width: 5rem;
+      height:auto;
+     }
+
+     @include media-breakpoint-between(sm, md){
+      padding-bottom:1.5rem !important;
+      & img{
+      width: 3rem;
+      height:auto;
+     }
+  }
+}
+

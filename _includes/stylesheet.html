@@ -1,0 +1,12 @@
+<!-- Bootstrap core CSS -->
+{%- if jekyll.environment == "production" or jekyll.environment == "netlify" %}
+ <link rel="stylesheet" href="{{ site.cdn.bootstrap-css }}" integrity="{{ site.cdn.bootstrap-css_hash }}" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+{% else %}
+<link href="{{ site.baseurl }}/assets/css/bootstrap/bootstrap@4.4.1.min.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/assets/css/animate.min.css" rel="stylesheet">
+{% endif -%}
+
+
+
+<link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">

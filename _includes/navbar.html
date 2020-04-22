@@ -1,0 +1,21 @@
+<div id="navbar" class="navbar navbar-expand-sm navbar-dark fixed-top ">
+  <div class="container-sm">
+    <a class="navbar-brand" href="#"> <img src="{{ site.baseurl }}/assets/brand/thffg.png" width="112" height="40" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  d-sm-flex justify-content-sm-end" id="navbarText">
+        <ul class="navbar-nav align-items-end">
+            
+            {% for nav in site.data.nav %}
+            {% assign pre = "#" %}
+            <li>
+                <a  href="{{ nav.link  | prepend:pre }}"   class="nav-link" > {{ nav.name }} </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+  </div>
+</div>
+

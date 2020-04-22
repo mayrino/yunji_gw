@@ -1,0 +1,33 @@
+#  first row
+first: 
+ - FAUX
+ - FUR
+ - INDUSTRY
+ - SCM
+ - BRAND
+ - SOLUTIONS
+
+#  second row
+second: 毛绒行业供销链全方位解决方案
+ #- zh: 毛绒行业 
+ #  en: maorong
+ #- zh: 供销链
+ #  en: chain
+ #- zh: 全方位 
+ #  en: all    
+ #- zh: 解决方案
+ #  en: solution
+       
+# third row
+third: 
+ - Welcome
+ - To
+ - Zhaogemao
+ - Platform          
+ - Studio
+
+ #pscode name
+qrcode:
+  - 扫码采购
+  - 扫码入库
+  - 扫码找样

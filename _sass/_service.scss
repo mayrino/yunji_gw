@@ -1,0 +1,173 @@
+//description 
+//this scss class definition for service page
+
+.service {
+   @extend %cover;
+   background-color:$white;
+   color: #333; 
+   background-image: url($service-bg-img-url);
+   padding-top: 1.5rem !important;
+   @include media-breakpoint-between(sm, xl){
+      padding-top: 1.8rem !important;
+  }
+  height: auto;  
+  box-shadow: none;
+  text-shadow: none;
+
+}
+
+
+
+
+%lineify {
+        content: '';
+        color:$gray-300;
+        width:100%;
+        overflow: hidden; 
+        clear:both; 
+        display: inline-flex; 
+        vertical-align: middle; 
+          
+  }
+
+.chief-lineify {
+  &::before {
+     @extend %lineify;
+     height:.3rem;
+     background-color: rgba($info, 0.86);
+    
+  }
+}
+
+.second-lineify {
+  &::after {
+   @extend %lineify;
+     height:.15rem;
+     background-color: rgba($info, 0.5);
+   }
+}
+
+
+
+.title-chief{
+   
+ @include media-breakpoint-down(md){
+      @include font-size(1.25rem , true);
+  }
+  @include media-breakpoint-between(md, lg){
+      @include font-size(1.55rem , true);
+  }
+
+  @include media-breakpoint-between(lg, xl){
+      @include font-size(1.85rem , true);
+  }
+
+  @include media-breakpoint-up(xl){
+   @include font-size(2.2rem , true);
+  } 
+ & small{
+    &::before {
+    content: "\00A0\00A0"; // em dash, nbsp"  
+ } 
+}
+
+
+} 
+.title-second{
+    @include media-breakpoint-down(md){
+      @include font-size(1.1rem , true);
+  }
+  @include media-breakpoint-between(md, lg){
+      @include font-size(1.35rem , true);
+  }
+    @include media-breakpoint-between(lg, xl){
+      @include font-size(1.65rem , true);
+  }
+  @include media-breakpoint-up(xl){
+   @include font-size(2.1rem , true);
+  } 
+}
+
+.card-icon {
+  max-width: 60%;
+  max-height: 60%;
+  height: 33.3%;
+  width: 33.3%;
+  margin-left: 33.3%;
+  margin-top:5%;
+  line-height: 1;
+  
+}
+
+
+.cards{
+  background-color: rgba($white, 0.5);
+  
+}
+
+
+.card{
+  border-radius: 0 !important;
+  background-color: rgba($white, 0.5);
+   @include media-breakpoint-up(md){ 
+      border: 0px solid $gray-300;
+  } 
+
+  width:auto;
+  height: 22.5rem;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+
+}
+
+.card-bg {
+  background-color:rgba(#627775,0.85);
+  color: #f0f0f0;
+  text-shadow: #000 0px 1px 0px;   
+  box-shadow: rgba(#627775, 0.8) 0px 15px 15px;
+
+}
+
+.text-body{
+  height:7.5rem;
+  overflow: hidden;
+}
+
+.typed-cursor {
+  opacity: 1;
+  color:$white;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  
+ }
+
+@mixin blink-opacity () {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; }
+}
+
+@keyframes blink {
+   @include blink-opacity;
+}
+@-webkit-keyframes blink {
+  @include blink-opacity;
+ }
+@-moz-keyframes blink {
+  @include blink-opacity;
+   }
+@-ms-keyframes blink {
+  @include blink-opacity; 
+}
+@-o-keyframes blink {
+ @include blink-opacity;
+ }
+
+

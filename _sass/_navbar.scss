@@ -1,0 +1,65 @@
+/*
+* @Author: Samon Xie
+* @Date:   2020-03-01 15:08:06
+* @Last Modified by:   Samon Xie
+* @Last Modified time: 2020-03-29 19:49:41
+*/
+//
+// main navbar
+//
+
+
+.navbar {
+    .nav-link {
+        display: inline-block;
+        padding: .25rem 0 !important;
+        margin-left: 1rem;
+        font-weight: $font-weight-bold;
+        color: rgba(255, 255, 255, .5);
+        background-color: transparent;
+        border-bottom: .25rem solid transparent;
+
+           &.focus,
+        &:hover {
+            border-bottom-color: rgba(255, 255, 255, .25);
+
+        }
+
+        &.active {
+            color: $white;
+            border-bottom-color: $white;
+        }
+
+       
+    }
+
+}
+
+.bg-light {
+    .nav-link {
+        &.focus,
+        &:hover {
+            border-bottom-color: rgba(000, 000, 000, .75);
+        }
+        &.active {
+            color: $gray-700;
+            border-bottom-color: $gray-700;
+        }
+    }
+}
+
+.container-sm {
+    max-width: 45em !important;
+}
+
+.navbar-dark {
+ .navbar-toggler-icon {
+    background-image: escape-svg($navbar-dark-toggler-icon-bg);
+  }
+}
+
+.navbar-light {
+ .navbar-toggler-icon {
+    background-image: escape-svg($navbar-light-toggler-icon-bg);
+  }
+}

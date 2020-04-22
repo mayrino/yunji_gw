@@ -1,0 +1,155 @@
+//description 
+//this scss class definition for about us page
+
+.about {
+    @extend %cover;
+    color: $gray-800;
+    background-color: $gray-100;
+    background-image: url($about-bg-img-url);
+    padding-top: 1.5rem !important;
+
+    @include media-breakpoint-between(sm, xl) {
+        padding-top: 1.8rem !important;
+    }
+    box-shadow: none;
+    text-shadow: none;
+    height: auto;
+}
+
+.about-lineify::after {
+    content: ""; // em dash, nbsp"  
+    overflow: hidden;
+    width: 15%;
+    clear: both;
+    display: inline-flex;
+    vertical-align: middle;
+    height: .12rem;
+    background-color: rgba($gray-700, 0.86);
+
+    @include media-breakpoint-up(md) {
+
+        width: 35%;
+    }
+}
+$line-horizontal-svg:url("data:image/svg+xml;base64,DQoNCg0KPHN2ZyB3aWR0aD0nODAnIGhlaWdodD0nODAnIHZpZXdCb3g9JzAgMCA4MCA4MCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4NCiAgICA8ZGVmcz4NCiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSdsZ18yJyB4MT0nMCUnIHkxPScwJScgeDI9JzEwMCUnIHkyPScwJSc+DQogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9JzAlJyBzdHlsZT0nc3RvcC1jb2xvcjojNzliOGZmOyBzdG9wLW9wYWNpdHk6MScgLz4NCiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0nNTAlJyBzdHlsZT0nc3RvcC1jb2xvcjojMDM2NmQ2O3N0b3Atb3BhY2l0eToxJyAvPg0KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PScxMDAlJyBzdHlsZT0nc3RvcC1jb2xvcjojNzliOGZmO3N0b3Atb3BhY2l0eToxJyAvPg0KICAgICAgICA8L2xpbmVhckdyYWRpZW50Pg0KICAgIDwvZGVmcz4NCiAgICA8ZyAgc3Ryb2tlPScjNzliOGZmJyBmaWxsPSd1cmwoI2xnXzIpJz4NCiAgICAgICAgPHJlY3QgIHg9JzUnICB5PSczNS41JyB3aWR0aD0nNzAnIGhlaWdodD0nOSc+DQogICAgICAgICAgICA8YW5pbWF0ZSAgYXR0cmlidXRlVHlwZT0nWE1MJyBhdHRyaWJ1dGVOYW1lPSd4JyBmcm9tPSc1JyB0bz0nNzAnIGJlZ2luPScwcycgZHVyPSc1cycgZmlsbD0ncmVtb3ZlJyByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4NCiAgICAgICAgPC9yZWN0Pg0KICAgICAgICA8cmVjdCByeD0iMiIgcnk9IjIiIHg9JzUnIHk9JzM4LjUnIHdpZHRoPSc3MCcgaGVpZ2h0PSczJyAvPg0KICAgIDwvZz4NCjwvc3ZnPg==")!default;
+//$line-horizontal-svg: url("data:image/svg+xml,<svg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'><line y1='38.5' stroke-linecap='round' x1='5' y2='38.5' x2='75' stroke='#{$primary}' stroke-width='3' /></svg>") !default;
+//$line-vertical-svg: url("data:image/svg+xml,<svg width='80' height='40' viewBox='0 0 80 40' xmlns='http://www.w3.org/2000/svg'><defs><linearGradient id='lg_1' x1='0%' y1='0%' x2='0%' y2='100%'><stop offset='0%' style='stop-color:#79b8ff; stop-opacity:1' /><stop offset='50%' style='stop-color:#0366d6;stop-opacity:1' /><stop offset='100%' style='stop-color:#79b8ff;stop-opacity:1' /></linearGradient></defs><g stroke-linecap='round' stroke='#79b8ff' fill='url(#lg_1)'><rect x='37' stroke-linecap='round' y='3' width='4.5' height='35'><animate id='one' attributeType='XML' attributeName='y' from='5' to='70' begin='0s' dur='3s' fill='remove' repeatCount="indefinite" /></rect><rect x='38.5' stroke-linecap='round' y='3' width='1.5' height='35' /></g></svg>") !default;
+$line-vertical-svg:url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nODAnIGhlaWdodD0nNDAnIHZpZXdCb3g9JzAgMCA4MCA0MCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4NCiAgICA8ZGVmcz4NCiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSdsZ18xJyB4MT0nMCUnIHkxPScwJScgeDI9JzAlJyB5Mj0nMTAwJSc+DQogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9JzAlJyBzdHlsZT0nc3RvcC1jb2xvcjojNzliOGZmOyBzdG9wLW9wYWNpdHk6MScgLz4NCiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0nNTAlJyBzdHlsZT0nc3RvcC1jb2xvcjojMDM2NmQ2O3N0b3Atb3BhY2l0eToxJyAvPg0KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PScxMDAlJyBzdHlsZT0nc3RvcC1jb2xvcjojNzliOGZmO3N0b3Atb3BhY2l0eToxJyAvPg0KICAgICAgICA8L2xpbmVhckdyYWRpZW50Pg0KICAgIDwvZGVmcz4NCiAgICA8ZyAgc3Ryb2tlPScjNzliOGZmJyBmaWxsPSd1cmwoI2xnXzEpJz4NCiAgICAgICAgPHJlY3QgIHg9JzM3JyAgeT0nMycgd2lkdGg9JzQuNScgaGVpZ2h0PSczNSc+DQogICAgICAgICAgICA8YW5pbWF0ZSBpZD0nb25lJyBhdHRyaWJ1dGVUeXBlPSdYTUwnIGF0dHJpYnV0ZU5hbWU9J3knIGZyb209JzUnIHRvPSc3MCcgYmVnaW49JzBzJyBkdXI9JzNzJyBmaWxsPSdyZW1vdmUnIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPg0KICAgICAgICA8L3JlY3Q+DQogICAgICAgIDxyZWN0IHJ4PSIyIiByeT0iMiIgeD0nMzguNScgeT0nMycgd2lkdGg9JzEuNScgaGVpZ2h0PSczNScgLz4NCiAgICA8L2c+DQo8L3N2Zz4=")!default;
+$line-dashes-horizontal-svg: url("data:image/svg+xml,<svg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'><line y1='38.5' stroke-linecap='butt' x1='5' y2='38.5' x2='75' stroke='#{$primary}' stroke-width='2' stroke-dasharray=' 3 3 '/></svg>") !default;
+$line-dashes-vertical-svg: url("data:image/svg+xml,<svg width='80' height='40' viewBox='0 0 80 40' xmlns='http://www.w3.org/2000/svg'><line x1='38.5' stroke-linecap='butt' y1='3' x2='38.5' y2='37' stroke='#{$primary}' stroke-width='1.5' stroke-dasharray=' 2 2'/></svg>") !default;
+
+.line-svg {
+    width: 5rem;
+    height: 2.5rem;
+
+    background-image: escape-svg($line-vertical-svg);
+
+    @include media-breakpoint-up(lg) {
+        background-image: escape-svg($line-horizontal-svg);
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.line-dashes-svg {
+    width: 5rem;
+    height: 2.5rem;
+    background-image: escape-svg($line-dashes-vertical-svg);
+    @include media-breakpoint-up(lg) {
+        background-image: escape-svg($line-dashes-horizontal-svg);
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+
+
+
+.display-float-green {
+    animation: floatV 13s ease-in-out infinite;
+
+    @include media-breakpoint-up(lg) {
+         animation: floatH 13s ease-in-out infinite
+    }
+}
+
+.display-float-teal {
+   
+    animation: floatV 10s ease-in-out infinite;
+
+    @include media-breakpoint-up(lg) {
+         
+         animation: floatH 10s ease-in-out infinite
+    }
+}
+
+.display-float-yellow {
+    
+    animation: floatV 11s ease-in-out infinite;
+
+    @include media-breakpoint-up(lg) {
+       
+         animation: floatH 11s ease-in-out infinite
+    }
+
+}
+
+.display-float-blue {
+  animation: floatV 14s ease-in-out infinite;
+
+    @include media-breakpoint-up(lg) {
+         animation: floatH 14s ease-in-out infinite
+    }
+
+}
+
+.display-float-purple {
+   
+    animation: floatV 12s ease-in-out infinite;
+
+    @include media-breakpoint-up(lg) {
+        
+         animation: floatH 12s ease-in-out infinite
+    }
+
+}
+
+.display-float-orange {
+   
+    animation: floatV 16s ease-in-out infinite;
+
+    @include media-breakpoint-up(lg) {
+        
+         animation: floatH 16s ease-in-out infinite
+    }
+
+}
+
+
+@keyframes floatV {
+    0% {
+        transform:   translateY(0)
+    }
+
+    50% {
+        transform:   translateY(-10px)
+    }
+
+    to {
+        transform:  translateY(0)
+    }   
+}
+
+@keyframes floatH {
+    0% {
+        transform:   translateX(0)
+    }
+
+    50% {
+        transform:    translateX(-15px)
+    }
+
+    to {
+        transform:    translateX(0)
+    }   
+}

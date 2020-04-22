@@ -1,0 +1,60 @@
+// Load Bootstrap variables and mixins
+@import "bootstrap@4.4.1/functions";
+@import "bootstrap@4.4.1/variables";
+@import "bootstrap@4.4.1/mixins";
+
+
+/*
+ * Base structure
+ */
+
+$body-color: $white;
+$body-bg: #333;
+
+
+//home page bg url
+$home-bg-img-url :"/assets/images/bg4.png";
+
+//service page  about us page contact us page bg url
+$service-bg-img-url :"/assets/images/earth-connect3.png";
+$about-bg-img-url :"/assets/images/bg2.png";
+$contact-bg-img-url :"/assets/images/bg5.png";
+
+// navbar
+//$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2.5' d='M2 5 h20 M2 12 h20 M2 19 h20 M12 5 v21 M12 27 h15 M27 26 v-5'/></svg>");
+//$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2.5' d='M2 5 h20 M2 12 h20 M2 19 h20 M12 5 v21 M12 27 h15 M27 26 v-5'/></svg>");
+
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30  30'><path stroke='#{$navbar-dark-color}' stroke-width = '2.5px' stroke-linejoin='round' fill='none' d='M3,5 H27 C27,5 27 5 3 25  M3, 25 H27'/></svg>");
+$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-width = '2.5px' stroke-linejoin='round' fill = 'none' d='M3,5 H27 C27,5 27 5 3 25  M3, 25 H27'/></svg>");
+
+
+html,
+body {
+   height: 100%;
+   font-family: $font-family-base;
+   @include font-size($font-size-base, true);
+   position: relative;    
+}
+
+
+
+
+
+
+
+
+//import home page  scss
+@import "normalize";
+@import "navbar";
+@import "home";
+@import "plf_svg";
+@import "fontself";
+
+//import service page about page contact page sacc
+@import "service";
+
+@import "about";
+
+@import "contact";
+
+@import "text";

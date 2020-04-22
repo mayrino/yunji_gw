@@ -1,0 +1,43 @@
+{%- comment -%}
+  Usage: include svgs/pfl_line2_holder.svg args
+
+  args can be one of the following:
+       id: symbol id 
+       dx: to the subsequent character  x axis -default: .35re
+       dy: to the subsequent character  y axis  -default: .35re
+    text: The text to show in the image - default: 'width x height'
+    class: -default: 'text'
+    width: default: 100%
+    height: default: none
+    text-anchor: position for start middle end -default: middle
+             
+{%- endcomment -%}
+
+{%- assign text = include.text | default: 'Text should be place' -%}
+{%- assign class = include.class | default: '' -%}
+{%- assign width = include.width | default: '100%' -%}
+{%- assign height = include.height | default: 'none' -%}
+{%- assign dx = include.dx | default: '.35rem' -%}
+{%- assign dy = include.dy | default: '.35rem' -%}
+{%- assign text-anchor = include.text-anchor | default: 'middle' -%}
+{%- assign id  = include.id  | default: 's-text' -%}
+
+{%- capture svg -%}
+
+<svg xmlns="http://www.w3.org/2000/svg" width="{{width}}" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<symbol id="{{ id }}">
+<text text-anchor="middle" x="50%" y="50%" id="typed" dx="{{ dx }}" dy="{{ dy }} " >{{ text }}</text>
+</symbol>
+Duplicate symbols
+<use xlink:href="#{{ id }}" class="{{ class }}"/>
+<use xlink:href="#{{ id }}" class="{{ class }}"/>
+<use xlink:href="#{{ id }}" class="{{ class }}"/>
+<use xlink:href="#{{ id }}" class="{{ class }}"/>
+<use xlink:href="#{{ id }}" class="{{ class }}"/>
+</svg>
+
+{%- endcapture -%}
+
+{{- svg | replace: '  ', '' | strip_newlines -}}
+
+

@@ -1,0 +1,38 @@
+# Server
+source:         "."
+destination:    ./_site
+host:           "192.168.101.46"
+port:           4001
+baseurl:        ""
+url:            "http://zhaogemao.com"
+encoding:       UTF-8
+exclude:
+  - bower_components
+  - node_modules
+  - js
+  - dist
+  - package-lock.json
+  - package.json
+
+
+# Social
+title:              "找个毛 供需平台 毛绒"
+description:        "毛绒 人造毛皮 长毛绒 找样 面料 超柔 羊羔毛 羊剪绒 狐狸毛 兔毛 颗粒"
+authors:            "Samon Xie"
+keywords:           "毛绒 人造毛皮 长毛绒 找样 面料 超柔 37 三七颗粒 爱美丽 小金雕 小金貂  羊羔毛 羊剪绒 狐狸毛 兔毛 颗粒 faux fur fake fur artificail fur Sherpa knittd fabric plush fur high pile woolen plush High-pile jacquard printed jacquard dog cony fox mink raccoon teddy bear rabbit dallas boa color discharge dischargea discharging differential acrylic fabric modacrylic fabric repreve recycled poly fabric"
+
+
+cdn:
+  # See https://www.srihash.org for info on how to generate the hashes
+  bootstrap-css:              "https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+  bootstrap-css_hash:         "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  bootstrap-js:               "https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js"
+  bootstrap-js_hash:          "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  bootstrap-js_bundle:        "https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+  bootstrap-js_bundle_hash:   "sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+  jquery:                     "https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"
+  jquery_hash:                "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  popper:                     "https://cdn.bootcss.com/popper.js/1.16.1/popper.min.js"
+  popper_hash:                "sha384-wtNlGLUJ2I0nMcuD4N4C2l3SrJdgaRpeu64hbXM9GHBPIEAQZqtmrvsJZAIL10I0"
+  typed-js:                   "https://cdn.bootcss.com/typed.js/2.0.11/typed.js"
+

@@ -1,0 +1,18 @@
+
+
+
+<svg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'>
+    <defs>
+        <linearGradient id='lg_2' x1='0%' y1='0%' x2='100%' y2='0%'>
+            <stop offset='0%' style='stop-color:#79b8ff; stop-opacity:1' />
+            <stop offset='50%' style='stop-color:#0366d6;stop-opacity:1' />
+            <stop offset='100%' style='stop-color:#79b8ff;stop-opacity:1' />
+        </linearGradient>
+    </defs>
+    <g  stroke='#79b8ff' fill='url(#lg_2)'>
+        <rect  x='5'  y='35.5' width='70' height='9'>
+            <animate  attributeType='XML' attributeName='x' from='5' to='70' begin='0s' dur='5s' fill='remove' repeatCount="indefinite" />
+        </rect>
+        <rect rx="2" ry="2" x='5' y='38.5' width='70' height='3' />
+    </g>
+</svg>

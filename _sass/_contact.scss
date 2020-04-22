@@ -1,0 +1,161 @@
+//description 
+//this scss class definition for contact page
+
+.contact {
+    @extend %cover;
+    color: $black;
+    background-color: $gray-200;
+   // background-image: url($contact-bg-img-url);
+    padding-top: 1.5rem !important;
+
+    @include media-breakpoint-between(sm, xl) {
+        padding-top: 1.8rem !important;
+    }
+
+    height: auto;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+
+$triangle :url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M24 22h-24l12-20z' fill='#2188ff'/></svg>") !default;
+$square :url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'> <rect x='0' y='0' rx='5'  ry='5' height='24' width='24' stroke='none' fill='#8a63d2'/></svg>") !default;
+$circle :url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'> <circle cx='50%' cy='50%' r='12' stroke='none' fill='#fb8532'/></svg>") !default;
+$diamond :url("data:image/svg+xml,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'  fill-rule='evenodd' clip-rule='evenodd' viewbox='0 0 24 24'><path  d='M12 .001l12 12-12 12-12-12 12-12z' fill='#34d058' stroke='none' /></svg>") !default;
+
+%sharps {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.triangle {
+    @extend %sharps;
+    top: 3.5rem;
+    left: 6.87rem;
+    width: 2.25rem;
+    background-image: escape-svg($triangle);
+    transform: rotate(-45deg);
+    animation: float 9s ease-in-out infinite;
+}
+
+
+.square {
+    @extend %sharps;
+    width: 1.25rem;
+    top: 2.85rem;
+    left: -1.25rem;
+    background-image: escape-svg($square);
+    transform: rotate(30deg);
+    animation: float 6s ease-in-out infinite;
+}
+
+.diamond {
+    @extend %sharps;
+    width: 0.75rem;
+    top: -1rem;
+    left: 0rem;
+    background-image: escape-svg($diamond);
+    animation: float 8s ease-in-out infinite;
+}
+
+.circle {
+    top: -1rem;
+    left: 6.87rem;
+    @extend %sharps;
+    width: 1rem;
+    background-image: escape-svg($circle);
+    animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: rotate(5deg) translateY(0)
+    }
+
+    50% {
+        transform: rotate(10deg) translateY(-10px)
+    }
+
+    to {
+        transform: rotate(5deg) translateY(0)
+    }
+}
+
+
+.map_col {
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(125, 98, 59, 1);
+    opacity: 1;
+    border-radius: 1.25rem;
+}
+
+.contact-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+    word-wrap: break-word;
+
+    & .card-img {
+        flex-shrink: 0; // For IE: https://github.com/twbs/bootstrap/issues/29396
+        width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch 
+        @include border-top-radius($card-inner-border-radius);
+        @include border-bottom-radius($card-inner-border-radius);
+    }
+}
+
+
+.contact-info-color {
+    color: #7d623b;
+
+    & img {
+        width: 1.5rem;
+        max-width: 2rem;
+    }
+
+    & span {
+       font-weight: 400;
+        @include media-breakpoint-down(md) {
+            @include font-size(1rem, true);
+        }
+
+        @include media-breakpoint-up(lg) {
+             @include font-size(1.25rem, true);
+       }
+    }
+
+& span>a {
+    color: inherit;
+    @include hover-focus() {
+        color: inherit;
+    }
+}
+
+}
+
+.focus-qa {
+   color:#000;
+   & figcaption {
+      font-weight: $font-weight-bold;
+      font-size:65%;
+      color:#000;
+   }
+
+}
+
+.slogan{
+
+  font-size: 1.1rem;
+     @include media-breakpoint-up(lg) {
+          @include font-size(2rem, true);
+     }
+      @include media-breakpoint-up(sm) {
+          @include font-size(1.2rem, true);
+     }
+}
+
+
+
+
+

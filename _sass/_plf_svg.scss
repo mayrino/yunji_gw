@@ -1,0 +1,76 @@
+/*
+* @Author: Samon Xie
+* @Date:   2020-03-23 13:24:13
+* @Last Modified by:   Samon Xie
+* @Last Modified time: 2020-04-22 17:34:09
+*/
+
+$colors:#56D9CD ,#E9F1DF, #3AA1BF,#F2385A, #F5A503;//#343639,#616867,#56D9CD ,#E9F1DF, #3AA1BF,#F2385A, #F5A503;
+$max: length($colors);
+$dash: 35;
+$dash-gap: 5;
+$dash-space: $dash * ($max - 1) + $dash-gap * $max;
+$time: 6s;
+$time-step: $time/$max;
+
+.text {
+  fill: $white;
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+  stroke-dasharray: $dash $dash-space;
+  stroke-dashoffset: 0;
+  animation: stroke $time infinite linear;
+ 
+
+  @for $item from 1 through $max {
+    &:nth-child(#{$max}n + #{$item}){
+      $color: nth($colors, $item);
+      stroke: $color;
+      animation-delay: -($time-step * $item);
+    }
+  }
+}
+
+
+
+$colors-slogan:#000, #8a63d2 , #2188ff;//#34d058,#fb8532 ;//,#F2385A, #F5A503;
+$slogan-max: length($colors-slogan);
+$slogan-dash: 210;
+$slogan-dash-gap: 10;
+$slogan-dash-space: $slogan-dash * ($slogan-max - 1) + $slogan-dash-gap * $slogan-max;
+$slogan-time: 10s;
+$slogan-time-step: $slogan-time/$slogan-max;
+
+.slogan-text {
+  fill: none;//$gray-500;
+  stroke-width: .5;
+  @include media-breakpoint-up(md) {
+    stroke-width: 1;
+  }
+  stroke-linejoin: round;
+  stroke-dasharray: $slogan-dash $slogan-dash-space;
+  stroke-dashoffset: 0;
+  animation: slogan-stroke $slogan-time infinite linear;
+ 
+  @for $slogan-item from 1 through $slogan-max {
+    &:nth-child(#{$slogan-max}n + #{$slogan-item}){
+      $slogan-color: nth($colors-slogan, $slogan-item);
+      stroke: $slogan-color;
+      animation-delay: -($slogan-time-step * $slogan-item);
+    }
+  }
+
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -($dash + $dash-gap) * $max;
+  }
+}
+
+@keyframes slogan-stroke {
+  100% {
+    stroke-dashoffset: -($slogan-dash + $slogan-dash-gap) * $slogan-max;
+  }
+}
+
