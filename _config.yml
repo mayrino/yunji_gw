@@ -1,7 +1,7 @@
 # Server
 source:         "."
 destination:    ./_site
-host:           "192.168.101.46"
+host:           "192.168.187.101"
 port:           4001
 baseurl:        ""
 url:            "http://zhaogemao.com"
