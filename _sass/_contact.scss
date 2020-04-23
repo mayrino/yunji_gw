@@ -155,6 +155,16 @@ $diamond :url("data:image/svg+xml,<svg width='24' height='24' xmlns='http://www.
      }
 }
 
+.qa-modal {
+  background-color: transparent; // remove default button style
+  border: 0 solid transparent;// remove default button style
+  @include hover-focus() {
+    outline: none;
+  }
+}
+
+
+
 
 
 

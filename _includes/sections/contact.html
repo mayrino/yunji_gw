@@ -29,21 +29,76 @@
                             <span>浙江省杭州市上城区土山弄科创中心</span>
                         </div>
                     </div>
-                    <div class="d-flex  flex-row align-items-center focus-qa">
+
+                    <!-- Modal -->
+<div class="modal fade" id="modal-zgm" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered " role="document">
+    <div class="modal-content">
+      <div class="modal-body bg-dark">
+         <div class="d-flex  flex-row align-items-center justify-content-around">
+            <img src="{{site.baseurl}}/assets/images/zhaogemao-gongzhonghao.jpg" class=" img-fluid " style=" width:8rem;"  alt="...">
+           
+         </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+                   <!-- Modal -->
+<div class="modal fade" id="modal-cgq" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered " role="document">
+    <div class="modal-content">
+      <div class="modal-body bg-dark">
+         <div class="d-flex  flex-row align-items-center justify-content-around">
+       
+            <img src="{{site.baseurl}}/assets/images/zhaogeyang-caigouqiu.png" class=" img-fluid "   style=" width:8rem;" alt="...">
+                
+         </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+                   <!-- Modal -->
+<div class="modal fade" id="modal-gyq" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered " role="document">
+    <div class="modal-content">
+      <div class="modal-body bg-dark">
+         <div class="d-flex  flex-row align-items-center justify-content-around">
+          
+                <img src="{{site.baseurl}}/assets/images/zhaogeyang-gongyingqiu.png" class=" img-fluid" style=" width: 8rem;"  alt="...">
+         </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+                    
+                    <div class="d-flex  flex-row align-items-center focus-qa ">
                         <p style="font-size: 75%"><strong>关注我们:</strong></p>
-                        <figure class="figure ml-4">
+                         <button class="qa-modal" type="button" data-toggle="modal" data-target="#modal-zgm" >
+                        <figure class="figure ml-2">
                             <img src="{{site.baseurl}}/assets/images/zhaogemao-gongzhonghao.jpg" class="figure-img img-fluid " style=" width:4rem;"  alt="...">
                             <figcaption class="figure-caption">找个毛公众号</figcaption>
                         </figure>
-                        <figure class="figure ml-4">
+                        </button>
+                        <button class="qa-modal" type="button" data-toggle="modal" data-target="#modal-cgq" >
+                        <figure class="figure ml-2">
                             <img src="{{site.baseurl}}/assets/images/zhaogeyang-caigouqiu.png" class="figure-img img-fluid "   style=" width:4rem;" alt="...">
                             <figcaption class=" figure-caption">找个样采购群</figcaption>
                         </figure>
-                        <figure class="figure ml-4">
+                    </button>
+                    <button class="qa-modal" type="button" data-toggle="modal" data-target="#modal-gyq" >
+                        <figure class="figure ml-2">
                             <img src="{{site.baseurl}}/assets/images/zhaogeyang-gongyingqiu.png" class="figure-img img-fluid" style=" width: 4rem;"  alt="...">
                             <figcaption class="figure-caption" >找个样供应群</figcaption>
                         </figure>
+                    </button>
                     </div>
+                
                     <div class="d-flex flex-row mt-3 mt-md-2 mt-lg-5 slogan ">
                         <span ><strong>     
             {% include svgs/slogan.svg  text ="便/捷/服/务/顾/客"  id="s-slogan" class="slogan-text"    %}

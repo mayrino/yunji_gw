@@ -16,7 +16,7 @@ $('body').scrollspy({ target: '#navbar' });
     
      // Event handling
     function click(evt) {
-        let target = evt.target
+        let target = evt.target;
         let nodeName= target.parentNode.nodeName;
        if(nodeName === 'LI' || nodeName ===  'li' ){
             let splitfy = target.href.split('/');
