@@ -1,5 +1,5 @@
 <main role="main" id="home" class="home font-weight-bold min-vh-100">
-    <canvas id="home-canvas"></canvas>
+    <canvas id="home-canvas"></canvas> 
     <div class="container d-flex flex-column justify-content-around">
         <div class=" d-inline-flex  flex-wrap flex-sm-nowrap justify-content-center text-white ">
             {% for word in site.data.home.first %}
@@ -8,28 +8,81 @@
         </div>
         <div class="d-inline-flex flex-wrap  justify-content-center profile-fs-2nd text-white 
 ">
-            {% include svgs/pfl_line2_holder.svg  text = site.data.home.second id="s-text" class="text" dx="0 2 2 2 2 2 2 2 2 2 2 2 2 2" dy="0 -15 15 -20 50 10 -15 -60 5 5 65 10 -20 20"  width="100%" %}
+            {% include svgs/pfl_line2_holder.svg text = site.data.home.second id="s-text" class="text" dx="0 2 2 2 2 2 2 2 2 2 2 2 2 2" dy="0 -15 15 -20 50 10 -15 -60 5 5 65 10 -20 20" width="100%" %}
         </div>
-
-        <div class="d-inline-flex flex-wrap justify-content-center text-info  ">
+        <div class="d-inline-flex flex-wrap justify-content-center text-info">
             {% for word in site.data.home.third %}
             <div class="p-1 profile-fs-3rd ">{{ word }}</div>
             {% endfor %}
         </div>
-        <div class="d-inline-flex flex-nowrap justify-content-around text-center font-weight-border qr-banner" >
+        <div class="d-inline-flex flex-nowrap justify-content-around text-center font-weight-border qr-banner">
             <figure class="figure">
-                <img  src="{{ site.baseurl }}/assets/images/ma2.jpg" class="figure-img img-fluid img-thumbnail rounded-circle" alt="{{ site.data.home.qrcode[0] }}">
+                <img src="{{ site.baseurl }}/assets/images/ma2.jpg" class="figure-img img-fluid img-thumbnail rounded-circle" alt="{{ site.data.home.qrcode[0] }}">
                 <figcaption class="figure-caption text-white">{{ site.data.home.qrcode[0] }}</figcaption>
             </figure>
             <figure class="figure">
-                <img  src="{{ site.baseurl }}/assets/images/ma1.jpg" class="figure-img img-fluid img-thumbnail rounded-circle" alt="{{ site.data.home.qrcode[1] }}">
+                <img src="{{ site.baseurl }}/assets/images/ma1.jpg" class="figure-img img-fluid img-thumbnail rounded-circle" alt="{{ site.data.home.qrcode[1] }}">
                 <figcaption class="figure-caption  text-white">{{ site.data.home.qrcode[1] }}</figcaption>
             </figure>
 
-              <figure class="figure">
-                <img  src="{{ site.baseurl }}/assets/images/zhaogeyang.jpg" class="figure-img img-fluid img-thumbnail rounded-circle" alt="{{ site.data.home.qrcode[2] }}">
+            <figure class="figure">
+                <img src="{{ site.baseurl }}/assets/images/zhaogeyang.jpg" class="figure-img img-fluid img-thumbnail rounded-circle" alt="{{ site.data.home.qrcode[2] }}">
                 <figcaption class="figure-caption text-white">{{ site.data.home.qrcode[2] }}</figcaption>
             </figure>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modalZgmcg" aria-labelledby="modalZgmgyLabel" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title text-weight-bold    text-dark" >找个毛采购端</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex  flex-row align-items-center justify-content-around">
+                            <img src="{{site.baseurl}}/assets/images/ma2.jpg" class=" img-fluid " style=" width:8rem;" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modalZgmgy" aria-labelledby="modalZgmgyLabel" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title text-weight-bold   text-dark" >找个毛供应端</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex  flex-row align-items-center justify-content-around">
+                            <img src="{{site.baseurl}}/assets/images/ma1.jpg" class=" img-fluid " style=" width:8rem;" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modalZgy" aria-labelledby="modalZgyLabel" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title text-weight-bold   text-dark" >找个样</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex  flex-row align-items-center justify-content-around">
+                            <img src="{{site.baseurl}}/assets/images/zhaogeyang.jpg" class=" img-fluid " style=" width:8rem;" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>
