@@ -1,10 +1,10 @@
 # Server
 source:         "."
 destination:    ./_site
-host:           "192.168.101.50"
+host:           "localhost"
 port:           4001
 baseurl:        ""
-url:            "http://zhaogemao.com"
+url:            "https://zhaogemao.com"
 encoding:       UTF-8
 exclude:
   - bower_components
