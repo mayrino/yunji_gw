@@ -1,4 +1,14 @@
-<!--
-  todo: 可以使用百度数据统计或其它
+<!-- define Google Analytics -->
+{%- if jekyll.environment == "production" or jekyll.environment == "netlify" %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119317029-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
--->
+  gtag('config', 'UA-119317029-2');
+</script>
+
+<!-- End Google Analytics -->
+{% endif %}
